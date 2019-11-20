@@ -3,7 +3,6 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography'
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
@@ -20,7 +19,7 @@ export default props => {
 
    return <Card className="education-entry">
       <CardHeader avatar={props.avatar}
-         title={props.titleName} subheader={props.titleNameComplement}/>
+         title={props.title} subheader={props.area}/>
       <Divider variant="middle" />
       <CardContent>
          <Typography variant="body2">

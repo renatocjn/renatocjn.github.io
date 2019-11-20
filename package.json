@@ -2,13 +2,13 @@
   "name": "rcjn-professional-react-website",
   "description": "Professional static website for Renato Caminha Juaçaba Neto",
   "author": "Renato Caminha Juaçaba Neto (renatocjn@gmail.com)",
-  "homepage": "TODO website url",
+  "homepage": "https://github.com/renatocjn/react-website",
   "version": "0.1.0",
   "private": true,
   "license": "APACHE",
   "repository": {
     "type": "git",
-    "url": "TODO github link"
+    "url": "git@github.com:renatocjn/react-website.git"
   },
   "dependencies": {
     "@material-ui/core": "^4.6.1",

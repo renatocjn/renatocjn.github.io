@@ -23,7 +23,7 @@ import PublishedWorkIcon from '@material-ui/icons/LibraryBooks';
 import SkillsIcon from '@material-ui/icons/Extension';
 
 
-export default () => {
+export default props => {
    const [isDrawerOpen, setDrawerState] = React.useState(false)
 
    const toggleDrawer = open => event => {
@@ -35,7 +35,7 @@ export default () => {
    }
 
    return <React.Fragment>
-            <AppBar position="static">
+            <AppBar position="sticky">
                <ToolBar>
                   <IconButton color="inherit" aria-label="Open shortcuts"
                      onClick={() => setDrawerState(true)}>
@@ -45,7 +45,7 @@ export default () => {
                      Renato Caminha Juaçaba Neto
                   </Typography>
                   <Typography className="appbar-subtitle" variant="subtitle2">
-                     PhD Student
+                     {props.position}
                   </Typography>
                </ToolBar>
             </AppBar>
