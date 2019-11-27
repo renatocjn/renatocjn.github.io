@@ -12,8 +12,6 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
-
-
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 
 export default props => (

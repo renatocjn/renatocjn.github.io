@@ -8,41 +8,42 @@ import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
 // Drawer stuff
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Drawer from '@material-ui/core/SwipeableDrawer';
+import Hidden from "@material-ui/core/Hidden"
+import Box from "@material-ui/core/Box"
 
-//Drawer Icons
-import ExperienceIcon from '@material-ui/icons/Work';
-import EducationIcon from '@material-ui/icons/School';
-import BioIcon from '@material-ui/icons/ShortText';
-import ContactInfoIcon from '@material-ui/icons/ContactPhone';
-import PublishedWorkIcon from '@material-ui/icons/LibraryBooks';
-import SkillsIcon from '@material-ui/icons/Extension';
+import NavLinks from './nav-links'
 
+import useStyles from '../styles'
 
 export default props => {
    const [isDrawerOpen, setDrawerState] = React.useState(false)
+   const classes = useStyles()
 
    const toggleDrawer = open => event => {
-      if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      if (event && event.type === 'keydown' &&
+         (event.key === 'Tab' || event.key === 'Shift')) {
          return;
       }
-
       setDrawerState(open);
    }
 
-   return <React.Fragment>
-            <AppBar position="sticky">
+   return <Box>
+            <AppBar className={classes.appBar}>
                <ToolBar>
-                  <IconButton color="inherit" aria-label="Open shortcuts"
-                     onClick={() => setDrawerState(true)}>
-                     <MenuIcon/>
-                  </IconButton>
-                  <Typography variant="h5">
-                     Renato Caminha Juaçaba Neto
+                  <Hidden mdUp implementation='css'>
+                     <IconButton color="inherit" aria-label="Open shortcuts"
+                        onClick={() => setDrawerState(true)}>
+                        <MenuIcon/>
+                     </IconButton>
+                  </Hidden>
+                  <Typography variant="title">
+                     <Hidden xsDown>Renato&nbsp;</Hidden>
+                     <Hidden smUp>R.&nbsp;</Hidden>
+                     <Hidden smDown>Caminha&nbsp;</Hidden>
+                     <Hidden mdUp>C.&nbsp;</Hidden>
+                     Juaçaba
+                     Neto
                   </Typography>
                   <Typography className="appbar-subtitle" variant="subtitle2">
                      {props.position}
@@ -50,50 +51,16 @@ export default props => {
                </ToolBar>
             </AppBar>
 
-            <SwipeableDrawer open={isDrawerOpen} onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
-               <List component="nav" aria-label="Shortcuts">
-                  <ListItem button component="a" href="#bio">
-                     <ListItemIcon>
-                        <BioIcon/>
-                     </ListItemIcon>
-                     <ListItemText primary="Short bio"/>
-                  </ListItem>
-
-                  <ListItem button component="a" href="#education">
-                     <ListItemIcon>
-                        <EducationIcon/>
-                     </ListItemIcon>
-                     <ListItemText primary="Education"/>
-                  </ListItem>
-
-                  <ListItem button component="a" href="#experience">
-                     <ListItemIcon>
-                        <ExperienceIcon/>
-                     </ListItemIcon>
-                     <ListItemText primary="Experience"/>
-                  </ListItem>
-
-                  <ListItem button component="a" href="#skills">
-                     <ListItemIcon>
-                        <SkillsIcon/>
-                     </ListItemIcon>
-                     <ListItemText primary="Skills"/>
-                  </ListItem>
-
-                  <ListItem button component="a" href="#published_work">
-                     <ListItemIcon>
-                        <PublishedWorkIcon/>
-                     </ListItemIcon>
-                     <ListItemText primary="Published Work"/>
-                  </ListItem>
-
-                  <ListItem button component="a" href="#contact">
-                     <ListItemIcon>
-                        <ContactInfoIcon/>
-                     </ListItemIcon>
-                     <ListItemText primary="Contact information"/>
-                  </ListItem>
-               </List>
-            </SwipeableDrawer>
-         </React.Fragment>
+            <Hidden lgUp implementation='css'>
+               <Box component="nav" className="drawer">
+                  <Drawer variant='temporary'
+                     open={isDrawerOpen}
+                     onClick={toggleDrawer(false)}
+                     onKeyDown={toggleDrawer(false)}
+                     ModalProps={{keepMounted: true}}>
+                     <NavLinks/>
+                  </Drawer>
+               </Box>
+            </Hidden>
+         </Box>
 }

@@ -7,8 +7,11 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
+import ExtensionIcon from '@material-ui/icons/Extension';
+
 export default props => (
-   <Section sectionId="skills" name="Skills">
+   <Section sectionId="skills" title="Skills"
+      subtitle="What I can do" icon={<ExtensionIcon/>}>
       <List> <Grid component="Grid" container spacing={1}>
          {Object.entries(props.data.list).map((item, idx) => {
             const [tech, level] = item

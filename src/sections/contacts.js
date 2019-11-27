@@ -12,8 +12,11 @@ import PhoneIcon from "@material-ui/icons/Phone"
 import PinDropIcon from "@material-ui/icons/PinDrop"
 import GitHubIcon from "@material-ui/icons/GitHub"
 
+import ContactPhoneIcon from "@material-ui/icons/ContactPhone"
+
 export default props => (
-   <Section sectionId="contact" name="Contact Info">
+   <Section sectionId="contact" title="Contact Info"
+      subtitle="How you can contact me" icon={<ContactPhoneIcon/>}>
       <List> <Grid component="Grid" container spacing={1}>
          <Grid item xs={12} sm={6} md={4}> <ListItem>
             <ListItemIcon> <MailIcon/> </ListItemIcon>
