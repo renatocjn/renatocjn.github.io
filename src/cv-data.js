@@ -3,8 +3,7 @@ export default {
    current_position: "PhD Student",
    short_bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sintoccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
    contact_info: {
-      email: "renatocjn@gmail.com",
-      phone_number: "+33 06 13 18 16 93",
+      email: "caminha@unistra.fr",
       github: "github.com/renatocjn",
       address: "Strasbourg, France"
    },

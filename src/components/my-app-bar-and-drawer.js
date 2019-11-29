@@ -11,8 +11,12 @@ import MenuIcon from '@material-ui/icons/Menu'
 import Drawer from '@material-ui/core/SwipeableDrawer';
 import Hidden from "@material-ui/core/Hidden"
 import Box from "@material-ui/core/Box"
+import List from "@material-ui/core/List"
+
+import Divider from "@material-ui/core/Divider"
 
 import NavLinks from './nav-links'
+import ContactsList from "./contacts"
 
 import useStyles from '../styles'
 
@@ -28,39 +32,45 @@ export default props => {
       setDrawerState(open);
    }
 
-   return <Box>
-            <AppBar className={classes.appBar}>
-               <ToolBar>
-                  <Hidden mdUp implementation='css'>
-                     <IconButton color="inherit" aria-label="Open shortcuts"
-                        onClick={() => setDrawerState(true)}>
-                        <MenuIcon/>
-                     </IconButton>
-                  </Hidden>
-                  <Typography variant="h1" className={classes.appBarTitle}>
-                     <Hidden xsDown>Renato&nbsp;</Hidden>
-                     <Hidden smUp>R.&nbsp;</Hidden>
-                     <Hidden smDown>Caminha&nbsp;</Hidden>
-                     <Hidden mdUp>C.&nbsp;</Hidden>
-                     Juaçaba
-                     Neto
-                  </Typography>
-                  <Typography variant="subtitle1" className={classes.appBarSubtitle}>
-                     {props.position}
-                  </Typography>
-               </ToolBar>
-            </AppBar>
+   return (
+      <Box>
+         <AppBar className={classes.appBar}>
+            <ToolBar>
+               <Hidden mdUp implementation='css'>
+                  <IconButton color="inherit" aria-label="Open shortcuts"
+                     onClick={() => setDrawerState(true)}>
+                     <MenuIcon/>
+                  </IconButton>
+               </Hidden>
+               <Typography variant="h1" className={classes.appBarTitle}>
+                  <Hidden xsDown>Renato&nbsp;</Hidden>
+                  <Hidden smUp>R.&nbsp;</Hidden>
+                  <Hidden smDown>Caminha&nbsp;</Hidden>
+                  <Hidden mdUp>C.&nbsp;</Hidden>
+                  Juaçaba
+                  Neto
+               </Typography>
+               <Typography variant="subtitle1" className={classes.appBarSubtitle}>
+                  {props.position}
+               </Typography>
+            </ToolBar>
+         </AppBar>
 
-            <Hidden lgUp implementation='css'>
-               <Box component="nav" className="drawer">
-                  <Drawer variant='temporary'
-                     open={isDrawerOpen}
-                     onClick={toggleDrawer(false)}
-                     onKeyDown={toggleDrawer(false)}
-                     ModalProps={{keepMounted: true}}>
-                     <NavLinks/>
-                  </Drawer>
-               </Box>
-            </Hidden>
-         </Box>
+         <Hidden lgUp implementation='css'>
+            <Drawer variant='temporary'
+               className={classes.drawer}
+               component="nav"
+               open={isDrawerOpen}
+               onClick={toggleDrawer(false)}
+               onKeyDown={toggleDrawer(false)}
+               ModalProps={{keepMounted: true}}>
+               <List>
+                  <NavLinks/>
+                  <Divider/>
+                  <ContactsList info={props.contact_info}/>
+               </List>
+            </Drawer>
+         </Hidden>
+      </Box>
+   )
 }

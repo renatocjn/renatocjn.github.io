@@ -12,7 +12,7 @@ export default props => (
       subtitle="Where I worked at" icon={<WorkIcon/>}>
       <Grid container spacing={1}>
       {props.data.map((entry, idx) => (
-            <Grid item key={idx} md={12} lg={6}>
+            <Grid item key={idx} lg={12} xl={6}>
                <ExperienceEntry {...entry} />
             </Grid>
             ))}

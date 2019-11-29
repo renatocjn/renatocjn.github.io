@@ -11,18 +11,32 @@ const theme = responsiveFontSizes(createMuiTheme({
       // type: 'dark'
    },
    typography: {
-      fontSize: 16,
-      h1: {
-         fontSize: 2,
-         fontWeight: 550
-      },
-      subtitle1: {
-         fontSize: 1.3,
-         fontWeight: 300
-      }
+      fontSize: 16
    },
    status: {
       danger: orange
+   },
+   overrides: {
+      MuiCardHeader: {
+         root: {
+            padding: '16px 16px 4px 16px'
+         }
+      },
+      MuiCardContent: {
+         root: {
+            padding: '4px 16px 16px 16px'
+         }
+      },
+      MuiListItem: {
+         root: {
+            'padding-top': '4px',
+            'padding-bottom': '4px'
+         },
+         gutters: {
+            "padding-left": '0px',
+            "padding-right": '0px',
+         }
+      }
    }
 }))
 
@@ -32,30 +46,72 @@ const styles = makeStyles(theme => ({
       background: 'lightblue',
       border: 0,
       borderRadius: 3,
-      color: 'white',
-      padding: '0 30px',
-      display: 'flex'
+      backgroundColor: 'white',
+      display: 'flex',
+      boxSizing: 'border-box'
    },
    appBar: {
       zIndex: theme.zIndex.drawer + 1,
       height: '60px',
       width: '100%',
-      position: 'fixed'
+      position: 'fixed',
+      alignItems: 'center'
+   },
+   appBarTitle: {
+      fontSize: '200%',
+      fontWeight: 550
    },
    appBarSubtitle: {
-      'margin-left': '8px'
+      marginLeft: '8px',
+      fontSize: '130%',
+      fontWeight: 300
+   },
+   drawer: {},
+   navItems: {
+      padding: `0 ${theme.spacing(2)}px`
+   },
+   navItemNested: {
+      paddingLeft: theme.spacing(4)
+   },
+   listItemHalfWidth: {
+      width: "50%",
+      display: "inline"
    },
    content: {
-      'margin-top': '65px'
-   },
-   sidebar: {},
-   sections: {
-      overflow: 'scroll',
+      marginTop: '65px',
       height: "Calc(100vh - 65px)"
    },
+   sidebar: {
+      height: "98%",
+      overflow: 'hidden',
+      paddingTop: 0
+   },
+   sectionsContainer: {
+      overflow: 'scroll',
+      height: "100%"
+   },
    section: {
-      padding: "0 8px"
-   }
+      padding: "8px",
+      marginBottom: '12px',
+      '&:last-child ': {
+         'margin-bottom': 0
+      }
+   },
+   sectionTitle: {
+      display: 'inline',
+      fontSize: '175%',
+      fontWeight: 450,
+      marginLeft: '8px'
+   },
+   sectionSubtitle: {
+      display: 'inline',
+      fontSize: '115%',
+      fontWeight: 300,
+      marginLeft: '8px'
+   },
+   educationEntry: {},
+   educationEntryHeader: {},
+   educationEntryContent: {}
 }))
 
 export { styles as default, theme }
