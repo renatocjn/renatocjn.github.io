@@ -5,6 +5,7 @@ import './App.css';
 import Box from "@material-ui/core/Box"
 import Grid from "@material-ui/core/Grid"
 import Hidden from "@material-ui/core/Hidden"
+import { ThemeProvider } from '@material-ui/core/styles';
 
 import MainContainer from './components/main-container';
 import MyAppBarAndDrawer, { sidebarComponents } from './components/my-app-bar-and-drawer'
@@ -18,12 +19,12 @@ import PublishedWorkSection from './sections/published_work'
 import ContactsSection from './sections/contacts'
 
 import cv_data from './cv-data'
-import useStyles from './styles'
+import useStyles, { theme } from './styles'
 
 export default () => {
    const classes = useStyles()
 
-   return <React.Fragment>
+   return <ThemeProvider theme={theme}>
             <MyAppBarAndDrawer position={cv_data.current_position}/>
             <MainContainer>
                <Grid container spacing={1} className={classes.content}>
@@ -42,5 +43,5 @@ export default () => {
                   </Grid>
                </Grid>
             </MainContainer>
-          </React.Fragment>
+          </ThemeProvider>
 }

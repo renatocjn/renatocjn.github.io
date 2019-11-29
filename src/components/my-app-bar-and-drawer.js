@@ -37,7 +37,7 @@ export default props => {
                         <MenuIcon/>
                      </IconButton>
                   </Hidden>
-                  <Typography variant="title">
+                  <Typography variant="h1" className={classes.appBarTitle}>
                      <Hidden xsDown>Renato&nbsp;</Hidden>
                      <Hidden smUp>R.&nbsp;</Hidden>
                      <Hidden smDown>Caminha&nbsp;</Hidden>
@@ -45,7 +45,7 @@ export default props => {
                      Juaçaba
                      Neto
                   </Typography>
-                  <Typography className="appbar-subtitle" variant="subtitle2">
+                  <Typography variant="subtitle1" className={classes.appBarSubtitle}>
                      {props.position}
                   </Typography>
                </ToolBar>
