@@ -8,6 +8,7 @@ import Hidden from "@material-ui/core/Hidden"
 import Divider from "@material-ui/core/Divider"
 import Paper from "@material-ui/core/Paper"
 import List from "@material-ui/core/List"
+import Avatar from "@material-ui/core/Avatar"
 import { ThemeProvider } from '@material-ui/core/styles';
 
 import MainContainer from './components/main-container';
@@ -32,9 +33,12 @@ export default () => {
             <MainContainer>
                <Grid container spacing={1} className={classes.content}>
                   <Hidden smDown>
-                     <Grid item md={3} lg={2}>
+                     <Grid item md={4} lg={3}>
                         <Paper className={classes.sidebar}>
                            <List>
+                              <Avatar className={classes.sidebarAvatar}
+                                 variant='rounded' src='/avatar.jpg' alt="My Picture"/>
+                              <Divider />
                               <NavLinks/>
                               <Divider />
                               <ContactsList info={cv_data.contact_info} />
@@ -42,7 +46,7 @@ export default () => {
                         </Paper>
                      </Grid>
                   </Hidden>
-                  <Grid item sm={12} md={9} lg={10} className={classes.sectionsContainer}>
+                  <Grid item sm={12} md={8} lg={9} className={classes.sectionsContainer}>
                      <BioSection short_bio={cv_data.short_bio} />
                      <EducationSection data={cv_data.education} />
                      <ExperienceSection data={cv_data.experience} />

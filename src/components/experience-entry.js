@@ -16,25 +16,28 @@ import useStyles from "../styles"
 
 export default props => {
    const classes = useStyles()
-   const cardClassesMapping = {
-      root: classes.educationEntry,
-      header: classes.educationEntryHeader,
-      content: classes.educationEntryContent
-   }
    return (
-      <Card classes={cardClassesMapping}>
-         <CardHeader title={props.position} subheader={props.company}/>
+      <Card className={classes.experienceEntry}>
+         <CardHeader title={props.position} subheader={props.company}
+            classes={{title: classes.experienceEntryHeader,
+               subheader: classes.experienceEntrySubHeader}}/>
          <Divider variant="middle"/>
-         <CardContent>
+         <CardContent className={classes.experienceEntryContent}>
             <Typography variant="body2">
-               <List>
-                  <ListItem key={0} className={classes.listItemHalfWidth}>
-                     <ListItemText primary="Begin" secondary={props.start.toLocaleDateString()} />
-                  </ListItem>
-                  <ListItem key={1} className={classes.listItemHalfWidth}>
-                     <ListItemText primary={props.end ? "End" : "Current"}
-                                   secondary={props.end && props.end.toLocaleDateString()}/>
-                  </ListItem>
+               <List disableSpacing>
+                  <Grid container>
+                     <Grid item xs={12} sm={4} md={3}>
+                        <ListItem key={0}>
+                           <ListItemText secondary="Begin" primary={props.start.toLocaleDateString()} />
+                        </ListItem>
+                     </Grid>
+                     <Grid item xs={12} sm={4} md={3}>
+                        <ListItem key={1}>
+                           <ListItemText secondary={props.end ? "End" : "Current"}
+                                         primary={props.end && props.end.toLocaleDateString()}/>
+                        </ListItem>
+                     </Grid>
+                  </Grid>
                   {props.activites.map((txt, idx) => (
                      <ListItem key={idx+2}> <ListItemText> {txt} </ListItemText> </ListItem>
                      ))}

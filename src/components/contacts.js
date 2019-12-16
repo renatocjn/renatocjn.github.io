@@ -20,7 +20,7 @@ export default props => {
    return (
       <List disablePadding>
          <Typography variant="body2">
-            <ListItem className={classes.navItems}>
+            <ListItem className={[classes.navItems, classes.contactInfo]}>
                <ListItemIcon> <MailIcon/> </ListItemIcon>
                <ListItemText primary={props.info.email} />
             </ListItem>
@@ -32,12 +32,12 @@ export default props => {
                // </ListItem>
             }
 
-            <ListItem className={classes.navItems}>
+            <ListItem className={[classes.navItems, classes.contactInfo]}>
                <ListItemIcon> <GitHubIcon/> </ListItemIcon>
                <ListItemText primary={props.info.github} />
             </ListItem>
 
-            <ListItem className={classes.navItems}>
+            <ListItem className={[classes.navItems, classes.contactInfo]}>
                <ListItemIcon> <PinDropIcon/> </ListItemIcon>
                <ListItemText primary={props.info.address} />
             </ListItem>

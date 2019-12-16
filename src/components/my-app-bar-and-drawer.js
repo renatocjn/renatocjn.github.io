@@ -38,7 +38,7 @@ export default props => {
             <ToolBar>
                <Hidden mdUp implementation='css'>
                   <IconButton color="inherit" aria-label="Open shortcuts"
-                     onClick={() => setDrawerState(true)}>
+                     onClick={() => setDrawerState(true)} className={classes.appBarBtn}>
                      <MenuIcon/>
                   </IconButton>
                </Hidden>
