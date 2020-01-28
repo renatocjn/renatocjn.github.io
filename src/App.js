@@ -2,19 +2,14 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
-import Box from "@material-ui/core/Box"
 import Grid from "@material-ui/core/Grid"
 import Hidden from "@material-ui/core/Hidden"
-import Divider from "@material-ui/core/Divider"
 import Paper from "@material-ui/core/Paper"
-import List from "@material-ui/core/List"
-import Avatar from "@material-ui/core/Avatar"
 import { ThemeProvider } from '@material-ui/core/styles';
 
 import MainContainer from './components/main-container';
-import MyAppBarAndDrawer, { sidebarComponents } from './components/my-app-bar-and-drawer'
-import NavLinks from './components/nav-links'
-import ContactsList from './components/contacts'
+import MyAppBarAndDrawer from './components/my-app-bar-and-drawer'
+import SideBar from "./components/sidebar"
 
 import BioSection from './sections/bio'
 import EducationSection from './sections/education'
@@ -33,20 +28,13 @@ export default () => {
             <MainContainer>
                <Grid container spacing={1} className={classes.content}>
                   <Hidden smDown>
-                     <Grid item md={4} lg={3}>
+                     <Grid item md={3}>
                         <Paper className={classes.sidebar}>
-                           <List>
-                              <Avatar className={classes.sidebarAvatar}
-                                 variant='rounded' src='/avatar.jpg' alt="My Picture"/>
-                              <Divider />
-                              <NavLinks/>
-                              <Divider />
-                              <ContactsList info={cv_data.contact_info} />
-                           </List>
+                           <SideBar contact_info={cv_data.contact_info} />
                         </Paper>
                      </Grid>
                   </Hidden>
-                  <Grid item sm={12} md={8} lg={9} className={classes.sectionsContainer}>
+                  <Grid item sm={12} md={9} className={classes.sectionsContainer}>
                      <BioSection short_bio={cv_data.short_bio} />
                      <EducationSection data={cv_data.education} />
                      <ExperienceSection data={cv_data.experience} />

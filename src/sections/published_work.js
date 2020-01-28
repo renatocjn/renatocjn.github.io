@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Section from '../components/section';
-import PublishedWorkEntry from '../components/published-work-entry'
+// import PublishedWorkEntry from '../components/published-work-entry'
 
 import LibraryBooksIcon from '@material-ui/icons/LibraryBooks';
 

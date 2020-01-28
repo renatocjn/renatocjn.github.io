@@ -5,7 +5,8 @@ export default {
    contact_info: {
       email: "caminha@unistra.fr",
       github: "github.com/renatocjn",
-      address: "Strasbourg, France"
+      address: "Strasbourg, France",
+      phone_number: "(+33) 3 68 85 44 01"
    },
    education: [ {
          title: "Bachelors", area: "Computer science",
@@ -26,7 +27,7 @@ export default {
    ],
    experience: [ {
          position: "Developer and research assistent",
-         company: "National center of High Performance Data Processing",
+         company: "National Center of High Performance Data Processing",
          start: new Date(2014, 7), end: new Date(2015, 3),
          activites: [
             "Development of WEB interface to access scientific cloud and cluster infrastructure. This system started and managed the execution of scientific payloads through a web interface.",

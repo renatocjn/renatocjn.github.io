@@ -12,6 +12,8 @@ import Drawer from '@material-ui/core/SwipeableDrawer';
 import Hidden from "@material-ui/core/Hidden"
 import Box from "@material-ui/core/Box"
 import List from "@material-ui/core/List"
+import ListItem from "@material-ui/core/ListItem"
+import ListItemText from "@material-ui/core/ListItemText"
 
 import Divider from "@material-ui/core/Divider"
 
@@ -43,12 +45,9 @@ export default props => {
                   </IconButton>
                </Hidden>
                <Typography variant="h1" className={classes.appBarTitle}>
-                  <Hidden xsDown>Renato&nbsp;</Hidden>
-                  <Hidden smUp>R.&nbsp;</Hidden>
-                  <Hidden smDown>Caminha&nbsp;</Hidden>
-                  <Hidden mdUp>C.&nbsp;</Hidden>
-                  Juaçaba
-                  Neto
+                  <Hidden xsDown>Renato&nbsp;</Hidden> <Hidden smUp>R.&nbsp;</Hidden>
+                  <Hidden smDown>Caminha&nbsp;</Hidden> <Hidden mdUp>C.&nbsp;</Hidden>
+                  Juaçaba Neto
                </Typography>
                <Typography variant="subtitle1" className={classes.appBarSubtitle}>
                   {props.position}
@@ -65,9 +64,10 @@ export default props => {
                onKeyDown={toggleDrawer(false)}
                ModalProps={{keepMounted: true}}>
                <List>
-                  <NavLinks/>
-                  <Divider/>
+                  <ListItem> <ListItemText primary="Contact Info"/> </ListItem>
                   <ContactsList info={props.contact_info}/>
+                  <Divider/>
+                  <NavLinks/>
                </List>
             </Drawer>
          </Hidden>

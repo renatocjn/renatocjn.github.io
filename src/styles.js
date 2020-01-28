@@ -18,19 +18,30 @@ const theme = responsiveFontSizes(createMuiTheme({
       danger: orange
    },
    overrides: {
-      //MuiSvgIcon: {
-      //   root: {
-      //      verticalAlignment: 'middle'
-      //   }
-      //},
       MuiCardHeader: {
          root: {
             padding: '.5rem .5rem .25rem .5rem'
+         },
+         title: {
+            display: 'inline-block'
+         },
+         subheader: {
+            display: 'inline-block'
          }
       },
       MuiCardContent: {
          root: {
-            padding: '.25rem 1rem 1rem 1rem'
+            // padding: '.25rem 1rem 1rem 1rem'
+            padding: ".25rem .75rem .25rem .75rem",
+            "&:last-child": {
+               paddingBottom: '.25rem'
+            }
+         }
+      },
+      MuiAvatar: {
+         colorDefault: {
+            color: "white",
+            backgroundColor: indigo[500]
          }
       },
       MuiListItem: {
@@ -42,11 +53,20 @@ const theme = responsiveFontSizes(createMuiTheme({
             "padding-left": 0,
             "padding-right": 0,
          }
+      },
+      MuiListItemText: {
+         root: { },
+         primary: {
+            display: 'inline-block',
+            paddingRight: '.5rem'
+         },
+         secondary: {
+            display: 'inline-block'
+         }
       }
    }
 }))
 
-const appDrawerWidth = 200;
 const styles = makeStyles(theme => ({
    root: {
       border: 0,
@@ -88,7 +108,7 @@ const styles = makeStyles(theme => ({
    },
    listItemHalfWidth: {
       width: "50%",
-      display: "inline-block"
+      display: "inline-block",
    },
    content: {
       marginTop: '65px',
@@ -98,16 +118,21 @@ const styles = makeStyles(theme => ({
    sidebar: {
       height: "98%",
       overflow: 'hidden',
-      paddingTop: 0
+      paddingTop: 0,
+      fontSize: ".9em"
+   },
+   Avatar: {
+      width: '10rem !important',
+      height: 'auto !important'
    },
    sidebarAvatar: {
-      margin: '0 auto .5rem auto',
-      height: 'auto',
-      width: '10rem',
+      margin: '1rem auto 1rem auto',
    },
    bioAvatar: {
-      width: '100%',
-      height: 'auto',
+      padding: theme.spacing(2),
+      float: 'right',
+      position: 'relative',
+      top: "-2.5rem"
    },
    sectionsContainer: {
       overflow: 'scroll',
@@ -115,26 +140,22 @@ const styles = makeStyles(theme => ({
    },
    section: {
       padding: theme.spacing(1),
-      marginBottom: theme.spacing(2),
+      marginBottom: theme.spacing(1),
       '&:last-child ': {
-         'margin-bottom': theme.spacing(0)
+         marginBottom: theme.spacing(0)
       }
    },
    sectionContent:{
-      marginTop: theme.spacing(3)
+      marginTop: theme.spacing(3),
+      padding: '0 !important'
    },
-   sectionIcon: {
-      marginLeft: theme.spacing(2),
-      verticalAlignment: 'center'
-   },
+   sectionAvatar: {},
    sectionTitle: {
-      display: 'inline',
       fontSize: '1.75rem',
       fontWeight: 450,
       marginLeft: theme.spacing(1)
    },
-   sectionSubtitle: {
-      display: 'inline',
+   sectionSubheader: {
       fontSize: '1.15rem',
       fontWeight: 300,
       marginLeft: theme.spacing(2.5)
@@ -149,13 +170,11 @@ const styles = makeStyles(theme => ({
    },
    educationEntry: {},
    educationEntryHeader: {
-      display: 'inline-block',
       fontSize: '1.4rem',
       fontWeight: 400,
       marginLeft: theme.spacing(1)
    },
    educationEntrySubHeader: {
-      display: 'inline-block',
       fontSize: '1.1rem',
       fontWeight: 300,
       marginLeft: theme.spacing(2)
