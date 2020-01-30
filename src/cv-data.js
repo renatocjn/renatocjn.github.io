@@ -12,17 +12,20 @@ export default {
          title: "Bachelors", area: "Computer science",
          school: "Federal University of Ceará",
          location: "Fortaleza, Brazil",
-         begin: 2010, end: 2014
+         begin: 2010, end: 2014,
+         extra: "During my license I tryed to acquire experience in multiple areas. Initially I studied high performance computing but wasn't that interest in the subject. Then me and friends created started a group to study security and provide some services to the community. By the end I got the oportunity to do research in computer networks"
       }, {
          title: "Master", area: "Computer science",
          school: "Federal University of Ceará",
          location: "Fortaleza, Brazil",
-         begin: 2015, end: 2017
+         begin: 2015, end: 2017,
+         extra: "During my masters I have worked with NarrowBand IoT. I analised the specifics of the resource block configurations. I also proposed an mode of operation that used multiple configurations at the same time."
       }, {
          title: "Doctorate", area: "Computer science",
          school: "Université de Strasbourg",
          location: "Strasbourg, France",
-         begin: 2019//, end: 2021
+         begin: 2019,// end: 2021,
+         extra: "My thesis is in privacy enabled inter-IoT communication."
       }
    ],
    experience: [ {

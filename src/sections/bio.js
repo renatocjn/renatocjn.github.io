@@ -16,7 +16,7 @@ export default props => {
          <Typography variant="body1" className={classes.bioText}>
             <Hidden mdUp implementation="css">
                <Avatar src="/avatar.jpg" variant="rounded"
-                  className={[classes.Avatar, classes.bioAvatar]} />
+                  className={[classes.Avatar, classes.bioAvatar].join(' ')} />
             </Hidden>
             {props.short_bio}
          </Typography>

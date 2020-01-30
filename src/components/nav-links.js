@@ -14,6 +14,7 @@ import useStyle from "../styles"
 
 export default () => {
    const classes = useStyle()
+
    return (
       <React.Fragment>
          {
@@ -36,7 +37,7 @@ export default () => {
          </ListItem>
 
          <ListItem button component="a"
-               href="#education" className={classes.navItems}>
+               href="#education" className={classes.navItems} >
             <ListItemIcon>
                <EducationIcon/>
             </ListItemIcon>

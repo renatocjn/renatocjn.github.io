@@ -11,16 +11,20 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 export default props => (
    <Section sectionId="skills" title="Skills"
       subtitle="What I can do" icon={<ExtensionIcon/>}>
-      <List disablePadding dense> <Grid component="Grid" container spacing={1}>
-         {Object.entries(props.data.list).map((item, idx) => {
-            const [tech, level] = item
-            return (
-               <Grid item xs={6} sm={4} md={3}> <ListItem>
-                  <ListItemText>{tech} {level}</ListItemText>
-                  {/*TODO maybe picture for the lvl? Maybe make this a graph*/}
-               </ListItem> </Grid>
+      <List disablePadding dense>
+         <Grid container spacing={1}>
+            {Object.entries(props.data.list).map((item, idx) => {
+               const [tech, level] = item
+               return (
+                  <Grid item xs={6} sm={4} md={3}>
+                     <ListItem>
+                        <ListItemText>{tech} {level}</ListItemText>
+                     {/*TODO maybe picture for the lvl? Maybe make this a graph*/}
+                     </ListItem>
+                  </Grid>
                )
-         })}
-      </Grid> </List>
+            })}
+         </Grid>
+      </List>
    </Section>
 )

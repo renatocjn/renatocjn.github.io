@@ -54,11 +54,17 @@ const theme = responsiveFontSizes(createMuiTheme({
             "padding-right": 0,
          }
       },
+      MuiListItemIcon: {
+         root: {
+            color: indigo[500],
+            minWidth: '2.5rem'
+         }
+      },
       MuiListItemText: {
          root: { },
          primary: {
             display: 'inline-block',
-            paddingRight: '.5rem'
+            marginRight: '.5rem'
          },
          secondary: {
             display: 'inline-block'
@@ -98,10 +104,13 @@ const styles = makeStyles(theme => ({
    },
    drawer: {},
    navItems: {
-      padding: theme.spacing(0, 2)
+      padding: theme.spacing(0, 5)
    },
    navItemNested: {
-      paddingLeft: theme.spacing(4)
+      paddingLeft: theme.spacing(9)
+   },
+   dividerWithPadding: {
+      margin: "1rem 0"
    },
    contactInfo: {
       fontSize: '.9em'
@@ -117,9 +126,10 @@ const styles = makeStyles(theme => ({
    },
    sidebar: {
       height: "98%",
-      overflow: 'hidden',
+      overflowX: 'hidden',
       paddingTop: 0,
-      fontSize: ".9em"
+      fontSize: ".9em",
+      overflowY: "scrool"
    },
    Avatar: {
       width: '10rem !important',
@@ -131,12 +141,12 @@ const styles = makeStyles(theme => ({
    bioAvatar: {
       padding: theme.spacing(2),
       float: 'right',
-      position: 'relative',
       top: "-2.5rem"
    },
    sectionsContainer: {
-      overflow: 'scroll',
-      height: "100%"
+      overflowX: 'hidden',
+      overflowY: 'scroll',
+      height: "98%"
    },
    section: {
       padding: theme.spacing(1),
@@ -177,7 +187,7 @@ const styles = makeStyles(theme => ({
    educationEntrySubHeader: {
       fontSize: '1.1rem',
       fontWeight: 300,
-      marginLeft: theme.spacing(2)
+      marginLeft: theme.spacing(1)
    },
    educationEntryContent: {},
    experienceEntry: {},

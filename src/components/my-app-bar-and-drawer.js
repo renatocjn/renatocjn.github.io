@@ -62,6 +62,8 @@ export default props => {
                open={isDrawerOpen}
                onClick={toggleDrawer(false)}
                onKeyDown={toggleDrawer(false)}
+               onClose={ () => {} }
+               onOpen={ () => {} }
                ModalProps={{keepMounted: true}}>
                <List>
                   <ListItem> <ListItemText primary="Contact Info"/> </ListItem>
