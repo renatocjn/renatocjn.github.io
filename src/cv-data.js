@@ -8,50 +8,68 @@ export default {
       address: "Strasbourg, France",
       phone_number: "(+33) 3 68 85 44 01"
    },
-   education: [ {
-         title: "Bachelors", area: "Computer science",
-         school: "Federal University of Ceará",
-         location: "Fortaleza, Brazil",
-         begin: 2010, end: 2014,
-         extra: "During my license I tryed to acquire experience in multiple areas. Initially I studied high performance computing but wasn't that interest in the subject. Then me and friends created started a group to study security and provide some services to the community. By the end I got the oportunity to do research in computer networks"
+   timeline: [{
+         type: "education", title: "Bachelor degree",
+         tldr: "Acquired a bachelor's degree in computer science from the Federal University of Ceará, Brazil",
+         dateTxt: "2010 - 2014",
+         specifics: {
+            study_area: "Computer science",
+            school: "Federal University of Ceará",
+            location: "Fortaleza, Brazil",
+            more_info: "During my license I tried to acquire experience in multiple areas. Initially I studied high performance computing but wasn't that interest in the subject. Then me and friends created started a group to study security and provide some services to the community. By the end I got the oportunity to do research in computer networks"
+         }
       }, {
-         title: "Master", area: "Computer science",
-         school: "Federal University of Ceará",
-         location: "Fortaleza, Brazil",
-         begin: 2015, end: 2017,
-         extra: "During my masters I have worked with NarrowBand IoT. I analised the specifics of the resource block configurations. I also proposed an mode of operation that used multiple configurations at the same time."
+         type: "education", title: "Master degree",
+         tldr: "Acquired a master's degree in computer science from the Federal University of Ceará, Brazil",
+         dateTxt: "2015 - 2017",
+         specifics: {
+            study_area: "Computer science",
+            school: "Federal University of Ceará",
+            location: "Fortaleza, Brazil",
+            more_info: "During my masters I have worked with NarrowBand IoT. I analised the specifics of the resource block configurations. I also proposed an mode of operation that used multiple configurations at the same time."
+         }
       }, {
-         title: "Doctorate", area: "Computer science",
-         school: "Université de Strasbourg",
-         location: "Strasbourg, France",
-         begin: 2019,// end: 2021,
-         extra: "My thesis is in privacy enabled inter-IoT communication."
-      }
-   ],
-   experience: [ {
-         position: "Developer and research assistent",
-         company: "National Center of High Performance Data Processing",
-         start: new Date(2014, 7), end: new Date(2015, 3),
-         activites: [
+         type: "education", title: "Doctorate degree",
+         tldr: "Recently began my PhD studies in the Université de Strasbourg. Here I study privacy and inter-iot networks communications",
+         dateTxt: "2019 - Present",
+         specifics: {
+            study_area: "Computer networks",
+            school: "Université de Strasbourg",
+            location: "Strasbourg, France",
+            extra: "My thesis is in privacy enabled inter-IoT communication."
+         }
+      }, {
+         type: "work_experience", title: "Developer and research assistent at the National Center of High Performance Data Processing",
+         tldr: "Worked on a project to develop an web interface to the computing resources available at my old university. At this position I learned much from web development, server management, virtualization and cluster management.",
+         dateTxt: "07/2014 - 03/2015",
+         specifics: {
+            company: "National Center of High Performance Data Processing",
+            activites: [
             "Development of WEB interface to access scientific cloud and cluster infrastructure. This system started and managed the execution of scientific payloads through a web interface.",
             "Creation and maintenance of scripts to manage and generate reports on Linux environments.",
             "Deployment of scientific application on cluster and cloud environments." ]
+         }
       }, {
-         position: "Network Analist and Web Developer",
-         company: "Finantial Group Casebrás",
-         start: new Date(2017, 10), end: new Date(2018, 8),
-         activites: [
-            "Helpdesk support to internal clients on all levels of complexity.",
-            "Development of WEB solutions for internal use of the several departments of the group.",
-            "Administration and monitoring of Linux and Windows servers." ]
+         type: "work_experience", title: "Network Analist and Web Developer at the Casebrás Group",
+         tldr: "Joined this company as technical support. Later moved to network management and web development to provide for internal necessities of the company. There I learned how to help end users and acquired much more experience in web development and network management.",
+         dateTxt: "10/2017 - 08/2018",
+         specifics: {
+            company: "Finantial Group Casebrás",
+            activites: [
+               "Helpdesk support to internal clients on all levels of complexity.",
+               "Development of WEB solutions for internal use of the several departments of the group.",
+               "Administration and monitoring of Linux and Windows servers." ]
+            }
       }, {
-         position: "Substitute Teacher",
-         company: "Federal Institute of Ceará",
-         start: new Date(2018, 8), end: new Date(2018, 12),
-         activites: [
+         type: "work_experience", title: "Substitute Teacher at the Federal Institute of Ceará",
+         tldr: "Acquired this position on a public exam. Was teaching bachelor level and techinical level classes. Had to handle difficult hours and classes out of my expertise due to lack of teachers.",
+         dateTxt: "08/2018 - 12/2018",
+         specifics: {
+            activites: [
             "Handled subjects like computer archtecture, networks and software engineering.",
             "Prepared and corrected course evaluations",
             "Techinical and University levels" ]
+         }
       }
    ],
    skills: {

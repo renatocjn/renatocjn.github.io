@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Section from '../components/section';
 import Grid from "@material-ui/core/Grid"
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import ExtensionIcon from '@material-ui/icons/Extension';
+
+import Section from '../components/section';
 
 export default props => (
    <Section sectionId="skills" title="Skills"

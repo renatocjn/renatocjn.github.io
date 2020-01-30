@@ -12,8 +12,9 @@ import MyAppBarAndDrawer from './components/my-app-bar-and-drawer'
 import SideBar from "./components/sidebar"
 
 import BioSection from './sections/bio'
-import EducationSection from './sections/education'
-import ExperienceSection from './sections/experience'
+// import EducationSection from './sections/education'
+// import ExperienceSection from './sections/experience'
+import TimelineSection from './sections/timeline'
 import SkillsSection from './sections/skills'
 import PublishedWorkSection from './sections/published_work'
 
@@ -36,8 +37,9 @@ export default () => {
                   </Hidden>
                   <Grid item sm={12} md={9} className={classes.sectionsContainer}>
                      <BioSection short_bio={cv_data.short_bio} />
-                     <EducationSection data={cv_data.education} />
-                     <ExperienceSection data={cv_data.experience} />
+                     <TimelineSection timeline_data={cv_data.timeline} />
+                     {/* <EducationSection data={cv_data.education} />
+                     <ExperienceSection data={cv_data.experience} /> */}
                      <SkillsSection data={cv_data.skills} />
                      <PublishedWorkSection data={cv_data.published_works} />
                   </Grid>

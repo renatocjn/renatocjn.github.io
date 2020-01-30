@@ -11,11 +11,11 @@ export default props => (
    <Section sectionId="education" title="Education"
       subtitle="My academic formation" icon={<SchoolIcon/>}>
       <Grid container spacing={1}>
-         {props.data.map((entry, idx) => {
-            return <Grid item key={idx} xs={12} sm={6} md={4}>
+         {props.data.map((entry, idx) => (
+            <Grid item key={idx} xs={12} sm={6} md={4}>
                <EducationEntry {...entry} />
             </Grid>
-         })}
+         ))}
       </Grid>
    </Section>
 )
