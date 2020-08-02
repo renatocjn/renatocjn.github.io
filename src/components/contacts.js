@@ -3,6 +3,7 @@ import React from 'react';
 import ListItem from "@material-ui/core/ListItem"
 import ListItemText from "@material-ui/core/ListItemText"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
+import Link from "@material-ui/core/Link"
 
 import MailIcon from "@material-ui/icons/Mail"
 import PhoneIcon from "@material-ui/icons/Phone"
@@ -18,7 +19,11 @@ export default props => {
       <React.Fragment>
          <ListItem className={[classes.navItems, classes.contactInfo].join(" ")}>
             <ListItemIcon> <MailIcon/> </ListItemIcon>
-            <ListItemText primary={props.info.email} />
+            <ListItemText>
+              <Link href={"mailto:"+props.info.email}>
+                {props.info.email}
+              </Link>
+            </ListItemText>
          </ListItem>
 
          <ListItem className={[classes.navItems, classes.contactInfo].join(" ")}>
@@ -28,7 +33,9 @@ export default props => {
 
          <ListItem className={[classes.navItems, classes.contactInfo].join(" ")}>
             <ListItemIcon> <GitHubIcon/> </ListItemIcon>
-            <ListItemText primary={props.info.github} />
+            <ListItemText>
+              <Link href={props.info.github}> GitHub </Link>
+            </ListItemText>
          </ListItem>
 
          <ListItem className={[classes.navItems, classes.contactInfo].join(" ")}>

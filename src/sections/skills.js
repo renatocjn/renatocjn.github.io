@@ -19,7 +19,7 @@ export default props => {
       <Grid container spacing={1} className={classes.skill_card_container}>
         {sortedSkillList.map(skill => {
           return (
-            <Grid item xs={6} sm={4} md={3}>
+            <Grid item xs={12} sm={6} md={4}>
               <SkillCard {...skill} levels={props.data.levels} />
             </Grid>
           )

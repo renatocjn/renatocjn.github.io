@@ -1,10 +1,10 @@
 
 export default {
   current_position: "PhD Student",
-  short_bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi utaliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sintoccaecat cupidatat non proident, sunt in culpa qui officia deserunt mollitanim id est laborum.",
+  short_bio: "Bachelors and Master’s degrees in computers Science at the Federal University of Ceará. Experience in management of Linux systems, helpdesk support and software development. Co-Founder of information security group. Researcher in cellular networks, Wi-Fi networks and Internet of Things. Autodidact. Available for reallocation. International experience.",
   contact_info: {
     email: "caminha@unistra.fr",
-    github: "github.com/renatocjn",
+    github: "https://github.com/renatocjn",
     address: "Strasbourg, France",
     phone_number: "(+33) 3 68 85 44 01"
   },
@@ -75,37 +75,49 @@ export default {
   skills: {
     levels: {1: "Beginner", 2: "Intermediary", 3: "Advanced"},
     list: [ {
-        name: "PostgreSQL",
+        name: "Relational Databases",
         level: 2,
-        few_words:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        few_words:"Used to schema design for internal systems. Training in database tuning. Given classes to undergraduate students. Used to mysql, sqlite and postgresql but have used sqlserver."
       }, {
         name: 'Windows',
         level: 1,
-        few_words: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        few_words: "Not an advanced windows user, but have provided support to companies with windows machines and servers."
       }, {
         name: 'JQuery',
         level: 3,
-        few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        few_words: 'Concrete knowledge of front end development with jquery code from my time in casebras.'
       }, {
         name: "Network Protocols",
         level: 3,
-        few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        few_words: 'Have a masters and am on course of acquiring a PhD in computer networks. Am a published author on wifi and cellular networks. Have given classes on protocols to undergraduate students. Familiar with protocols from internet of things and ad hoc networks due to my reseach work.'
       }, {
         name: 'Linux',
         level: 3,
-        few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        few_words: 'Have been a user for 10 years. Have managed headless application servers like apache, postgres, mysql, etc. Am used to the ubuntu and debian distributions.'
       }, {
-        name: 'Python',
+        name: 'Python scripting and data analisys',
         level: 3,
-        few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        few_words: 'Used python scripting for statistical analisys and data visualization during my academic research. Familiar with libraries such as: Pandas, matplotlib, seaborn, sklearn and scikit.'
       }, {
         name: 'Rails',
         level: 3,
-        few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        few_words: 'Have developed multiple applications for internal use by previous company. Familiar with version 5. My code can be found in my github.'
       }, {
-        name: 'Java',
+        name: 'React',
+        level: 1,
+        few_words: 'Have training in this techonology and build this website to try it out. Took it up due to its potential to be used in conjuntion with Rails for my web devepment.'
+      }, {
+        name: 'Network simulations with C++',
+        level: 3,
+        few_words: 'Very familiar with Network Simulator 3 (NS3) from multiple evaluations of my research work. C++ knowledge was acquired in order to write correcly this simulations, so I am used to handling C++ code.'
+      }, {
+        name: 'Self learning',
+        level: 3,
+        few_words: 'Academic research required me to learn on my own much of the necessary knowledge required to acomplish my objectives.'
+      }, {
+        name: 'Network security',
         level: 2,
-        few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+        few_words: 'Acquired considerable knowledge on network security, computer forensics and pentesting by self study with student group.'
       }
     ]
   },
@@ -116,8 +128,11 @@ export default {
       location: "São Pedro, Brazil",
       year: 2017,
       links: [{
-        type: 'pdf',
-        link: 'google.com',
+        type: 'SBrT',
+        link: 'https://biblioteca.sbrt.org.br/articles/459',
+      }, {
+        type: "DOI",
+        link: 'https://doi.org/10.14209/sbrt.2017.61'
       }],
       few_words: ''
     }, {
@@ -128,7 +143,7 @@ export default {
       year: 2014,
       links: [{
         type: 'pdf',
-        link: 'google.com',
+        link: 'http://www.tise.cl/volumen10/TISE2014/tise2014_submission_305.pdf',
       }],
       few_words: ''
     }, {
@@ -138,8 +153,11 @@ export default {
       location: "Rio de Janeiro, Brazil",
       year: 2014,
       links: [{
-        type: 'pdf',
-        link: 'google.com',
+        type: 'ieeexplore',
+        link: 'https://ieeexplore.ieee.org/document/7020810/',
+      }, {
+        type: 'DOI',
+        link: 'https://doi.org/10.1109/WD.2014.7020810'
       }],
       few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }, {
@@ -149,11 +167,11 @@ export default {
       location: "Brasília, Brazil",
       year: 2013,
       links: [{
-        type: 'pdf',
-        link: 'https://google.com',
+        type: 'springer',
+        link: 'https://link.springer.com/chapter/10.1007/978-3-642-40922-6_3',
       }, {
-        type: 'ieeexplore',
-        link: 'https://ieeexplore.com'
+        type: 'DOI',
+        link: 'https://doi.org/10.1007/978-3-642-40922-6_3'
       }],
       few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }

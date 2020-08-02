@@ -205,24 +205,16 @@ const theme = responsiveFontSizes(createMuiTheme({
   },
   experienceEntryContent: {},
   skill_card_container: {},
-  skill_card: {
-    flex: 1
-  },
+  skill_card: {},
   publication_card_container: {},
-  publication_card: {
-    flex: 1
+  publication_card: {},
+  publication_card_title: {
+    fontWeight: 425
   },
-  pdf_pub_button: {
-    backgroundColor: '#cb0a0a',
-    color: 'white !important',
-    marginLeft: theme.spacing(1)
+  publication_card_text: {
+    fontWeight: 300
   },
-  ieee_pub_button: {
-    backgroundColor: '#17445a',
-    colour: 'white !important',
-    marginLeft: theme.spacing(1)
-  },
-  other_pub_button: {}
+  pub_button: {}
 }))
 
 export { styles as default, theme }

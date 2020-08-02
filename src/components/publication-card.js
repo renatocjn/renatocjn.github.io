@@ -8,11 +8,13 @@ import Typography from '@material-ui/core/Typography';
 import Collapse from '@material-ui/core/Collapse';
 import Divider from '@material-ui/core/Divider';
 
+import Button from '@material-ui/core/Button';
+
 import IconButton from '@material-ui/core/IconButton';
+import LinkIcon from '@material-ui/icons/Link';
 import ExpandMoreIcon from '@material-ui/icons/Add';
 import ExpandLessIcon from '@material-ui/icons/Remove';
 
-import PublicationButton from './publication-button'
 import useStyles from "../styles"
 
 export default props => {
@@ -36,24 +38,29 @@ export default props => {
 
   return (
     <Card elevation={0} variant='outlined' className={classes.publication_card}>
-      <CardHeader title={<b>{props.title}</b>} titleTypographyProps={{variant: 'subtitle1'}}
-        action={props.few_words ? expandComp : undefined}/>
+      <CardHeader title={props.title} action={props.few_words ? expandComp : undefined}
+        titleTypographyProps={{variant: 'body1', className: classes.publication_card_title}} />
 
       <Divider variant='middle' light/>
 
       <CardContent>
-        <Typography body2> Authors: {props.authors.join(", ")} </Typography>
-        <Typography body2> Venue: {props.venue} </Typography>
-        <Typography body2> Location: {props.location} </Typography>
-        <Typography body2> Year: {props.year} </Typography>
+        <Typography body2 className={classes.publication_card_text}>
+          <b>Authors:</b> {props.authors.join("; ")} <br/>
+          <b>Venue:</b> {props.venue} <br/>
+          <b>Location:</b> {props.location} &nbsp; &nbsp; &nbsp; <b>Year:</b> {props.year}
+        </Typography>
+
         <CardActions>
-          {props.links.map(link => (
-            <PublicationButton {...link} />
+          {props.links.map(({type, link}) => (
+            <Button href={link} className={classes.pub_button}
+              endIcon={<LinkIcon/>}
+              disableElevation size='small'>{type}</Button>
             ))}
         </CardActions>
+
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <Divider variant='middle' light/>
-          <Typography body2> {props.few_words} </Typography>
+          <Typography body2 className={classes.publication_card_text}> {props.few_words} </Typography>
         </Collapse>
       </CardContent>
     </Card>

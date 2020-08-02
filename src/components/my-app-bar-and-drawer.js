@@ -68,9 +68,8 @@ export default props => {
                onOpen={ () => {} }
                ModalProps={{keepMounted: true}}>
                <List>
-                  <ListItem> <ListItemText primary="Contact Info"/> </ListItem>
                   <ContactsList info={props.contact_info}/>
-                  <Divider/>
+                  <Divider className={classes.dividerWithPadding}/>
                   <NavLinks/>
                </List>
             </Drawer>

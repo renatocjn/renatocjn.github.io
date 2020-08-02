@@ -15,7 +15,7 @@ export default props => {
                subtitle="A short description of myself">
          <Typography variant="body1" className={classes.bioText}>
             <Hidden mdUp implementation="css">
-               <Avatar src="/avatar.jpg" variant="rounded"
+               <Avatar src={process.env.PUBLIC_URL+"/avatar.jpg"} variant="rounded"
                   className={[classes.Avatar, classes.bioAvatar].join(' ')} />
             </Hidden>
             {props.short_bio}
