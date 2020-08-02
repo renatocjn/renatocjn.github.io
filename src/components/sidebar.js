@@ -15,7 +15,7 @@ export default props => {
    return (
       <List className={classes.sidebar}>
          <Avatar className={[classes.Avatar, classes.sidebarAvatar]}
-            variant='rounded' src='/avatar.jpg' alt="My Picture"/>
+            variant='rounded' src={process.env.PUBLIC_URL+'/avatar.jpg'} alt="My Picture"/>
          <ContactsList info={props.contact_info} />
          <Divider className={classes.dividerWithPadding} light variant="middle"/>
          <NavLinks/>

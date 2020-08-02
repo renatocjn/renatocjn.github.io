@@ -5,6 +5,7 @@ import './App.css';
 import Grid from "@material-ui/core/Grid"
 import Hidden from "@material-ui/core/Hidden"
 import Paper from "@material-ui/core/Paper"
+import Divider from "@material-ui/core/Divider"
 import { ThemeProvider } from '@material-ui/core/styles';
 
 import MainContainer from './components/main-container';
@@ -30,17 +31,22 @@ export default () => {
                <Grid container spacing={1} className={classes.content}>
                   <Hidden smDown>
                      <Grid item md={3}>
-                        <Paper className={classes.sidebar}>
+                        <Paper className={classes.sidebar} elevation={0}>
                            <SideBar contact_info={cv_data.contact_info} />
                         </Paper>
                      </Grid>
                   </Hidden>
                   <Grid item sm={12} md={9} className={classes.sectionsContainer}>
                      <BioSection short_bio={cv_data.short_bio} />
+                     <Divider className={classes.dividerWithPadding} variant="middle"/>
                      <TimelineSection timeline_data={cv_data.timeline} />
+                     <Divider className={classes.dividerWithPadding} variant="middle"/>
                      {/* <EducationSection data={cv_data.education} />
-                     <ExperienceSection data={cv_data.experience} /> */}
+                     <Divider variant="middle"/>
+                     <ExperienceSection data={cv_data.experience} />
+                     <Divider variant="middle"/>*/}
                      <SkillsSection data={cv_data.skills} />
+                     <Divider className={classes.dividerWithPadding} variant="middle"/>
                      <PublishedWorkSection data={cv_data.published_works} />
                   </Grid>
                </Grid>

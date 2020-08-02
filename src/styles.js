@@ -110,7 +110,7 @@ const styles = makeStyles(theme => ({
       paddingLeft: theme.spacing(9)
    },
    dividerWithPadding: {
-      margin: "1rem 0"
+      margin: theme.spacing(2)
    },
    contactInfo: {
       fontSize: '.9em'

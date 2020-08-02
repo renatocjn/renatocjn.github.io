@@ -9,7 +9,7 @@ import useStyles from '../styles'
 
 export default props => {
    const classes = useStyles()
-   return <Card id={props.sectionId} className={classes.section}>
+   return <Card id={props.sectionId} className={classes.section} elevation={0}>
             <CardHeader title={props.title} subheader={<Hidden xsDown>{props.subtitle}</Hidden>}
                 classes={{title:classes.sectionTitle, subheader: classes.sectionSubheader}}
                 avatar={<Avatar className={classes.sectionAvatar}>{props.icon}</Avatar>} />

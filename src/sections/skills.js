@@ -1,31 +1,27 @@
 import React from 'react';
 
 import Grid from "@material-ui/core/Grid"
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 
 import ExtensionIcon from '@material-ui/icons/Extension';
 
 import Section from '../components/section';
+import SkillCard from '../components/skill-card';
 
-export default props => (
-   <Section sectionId="skills" title="Skills"
-      subtitle="What I can do" icon={<ExtensionIcon/>}>
-      <List disablePadding dense>
-         <Grid container spacing={1}>
-            {Object.entries(props.data.list).map((item, idx) => {
-               const [tech, level] = item
-               return (
-                  <Grid item xs={6} sm={4} md={3}>
-                     <ListItem>
-                        <ListItemText>{tech} {level}</ListItemText>
-                     {/*TODO maybe picture for the lvl? Maybe make this a graph*/}
-                     </ListItem>
-                  </Grid>
-               )
-            })}
-         </Grid>
-      </List>
-   </Section>
-)
+export default props => {
+  const sortedSkillList = props.data.list.sort((a, b) => (a.level < b.level) ? 1 : -1)
+
+  return (
+    <Section sectionId="skills" title="Skills"
+    subtitle="What I can do" icon={<ExtensionIcon/>}>
+      <Grid container spacing={1}>
+        {sortedSkillList.map(skill => {
+          return (
+            <Grid item xs={6} sm={4} md={3}>
+              <SkillCard {...skill} levels={props.data.levels} />
+            </Grid>
+          )
+        })}
+      </Grid>
+    </Section>
+  )
+}
