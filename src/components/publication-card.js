@@ -3,17 +3,16 @@ import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import Collapse from '@material-ui/core/Collapse';
 import Divider from '@material-ui/core/Divider';
 
-import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import ExpandMoreIcon from '@material-ui/icons/Add';
 import ExpandLessIcon from '@material-ui/icons/Remove';
 
-import LocalLibraryIcon from '@material-ui/icons/LocalLibrary';
-
+import PublicationButton from './publication-button'
 import useStyles from "../styles"
 
 export default props => {
@@ -37,26 +36,25 @@ export default props => {
 
   return (
     <Card elevation={0} variant='outlined' className={classes.publication_card}>
-      <CardHeader avatar={<LocalLibraryIcon/>}
-        title={props.title} action={props.few_words ? expandComp : undefined}/>
+      <CardHeader title={<b>{props.title}</b>} titleTypographyProps={{variant: 'subtitle1'}}
+        action={props.few_words ? expandComp : undefined}/>
+
+      <Divider variant='middle' light/>
+
       <CardContent>
-      <Typography> Authors: {props.authors.join(", ")} </Typography>
-      <Typography> Venue: {props.venue} </Typography>
-      <Typography> Location: {props.location} </Typography>
-      <Typography> Year: {props.year} </Typography>
-      <Typography> Links:
-        {
-          props.links.map(link => (
-            <Button href={link.link} disableElevation size='small'>
-              {link.type}
-            </Button>
-          ))
-        }
-      </Typography>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <Divider variant='middle' light/>
-        <Typography> {props.few_words} </Typography>
-      </Collapse>
+        <Typography body2> Authors: {props.authors.join(", ")} </Typography>
+        <Typography body2> Venue: {props.venue} </Typography>
+        <Typography body2> Location: {props.location} </Typography>
+        <Typography body2> Year: {props.year} </Typography>
+        <CardActions>
+          {props.links.map(link => (
+            <PublicationButton {...link} />
+            ))}
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <Divider variant='middle' light/>
+          <Typography body2> {props.few_words} </Typography>
+        </Collapse>
       </CardContent>
     </Card>
   )

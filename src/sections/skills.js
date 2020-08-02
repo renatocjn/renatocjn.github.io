@@ -7,13 +7,16 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 import Section from '../components/section';
 import SkillCard from '../components/skill-card';
 
+import useStyles from '../styles'
+
 export default props => {
   const sortedSkillList = props.data.list.sort((a, b) => (a.level < b.level) ? 1 : -1)
+  const classes = useStyles()
 
   return (
     <Section sectionId="skills" title="Skills"
     subtitle="What I can do" icon={<ExtensionIcon/>}>
-      <Grid container spacing={1}>
+      <Grid container spacing={1} className={classes.skill_card_container}>
         {sortedSkillList.map(skill => {
           return (
             <Grid item xs={6} sm={4} md={3}>

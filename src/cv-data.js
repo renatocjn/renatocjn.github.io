@@ -145,7 +145,7 @@ export default {
     }, {
       authors: ["Carvalho Junior F. H.", "Rezende, C. A.", "Silva, J. d. C.", "Magalhães, F. J. L.", "Juaçaba Neto, R. C."],
       title: "On the Performance of Multidimensional Array Representations in Programming Languages Based on Virtual Execution Machines",
-      venue: "razilian Symposium on Programming Languages",
+      venue: "Brazilian Symposium on Programming Languages",
       location: "Brasília, Brazil",
       year: 2013,
       links: [{

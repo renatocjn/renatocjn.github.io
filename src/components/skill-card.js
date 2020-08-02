@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/Add';
 import ExpandLessIcon from '@material-ui/icons/Remove';
 
-import ProgressBeginner from '@material-ui/icons/Battery30';
+import ProgressBeginner from '@material-ui/icons/Battery20';
 import ProgressIntermediary from '@material-ui/icons/Battery60';
 import ProgressAdvanced from '@material-ui/icons/Battery90';
 
@@ -55,7 +55,7 @@ export default function SkillCard(props) {
         action={expandComp}/>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>
+          <Typography caption>
             {props.few_words}
           </Typography>
         </CardContent>

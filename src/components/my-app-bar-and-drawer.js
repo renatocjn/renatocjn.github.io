@@ -49,9 +49,11 @@ export default props => {
                   <Hidden smDown>Caminha&nbsp;</Hidden> <Hidden mdUp>C.&nbsp;</Hidden>
                   Juaçaba Neto
                </Typography>
-               <Typography variant="subtitle1" className={classes.appBarSubtitle}>
-                  {props.position}
-               </Typography>
+               <Hidden xsDown>
+                 <Typography variant="subtitle1" className={classes.appBarSubtitle}>
+                    {props.position}
+                 </Typography>
+               </Hidden>
             </ToolBar>
          </AppBar>
 
