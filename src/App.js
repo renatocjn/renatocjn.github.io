@@ -11,6 +11,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import MainContainer from './components/main-container';
 import MyAppBarAndDrawer from './components/my-app-bar-and-drawer'
 import SideBar from "./components/sidebar"
+import Footer from "./components/footer"
 
 import BioSection from './sections/bio'
 // import EducationSection from './sections/education'
@@ -27,7 +28,7 @@ export default () => {
 
    return <ThemeProvider theme={theme}>
             <MyAppBarAndDrawer position={cv_data.current_position} contact_info={cv_data.contact_info}/>
-            <MainContainer>
+            <MainContainer className={classes.mainComponent}>
                <Grid container spacing={1} className={classes.content}>
                   <Hidden smDown>
                      <Grid item md={3}>
@@ -51,5 +52,6 @@ export default () => {
                   </Grid>
                </Grid>
             </MainContainer>
+            <Footer/>
           </ThemeProvider>
 }

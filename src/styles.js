@@ -102,7 +102,9 @@ const theme = responsiveFontSizes(createMuiTheme({
   appBarBtn: {
     alignSelf: "flex-start"
   },
-  drawer: {},
+  drawer: {
+    paddingTop: '65px'
+  },
   navItems: {
     padding: theme.spacing(0, 5)
   },
@@ -121,8 +123,9 @@ const theme = responsiveFontSizes(createMuiTheme({
   },
   content: {
     marginTop: '65px',
-    height: "Calc(100vh - 65px)",
-    minHeight: "10vh"
+    height: "Calc(100vh - 65px - 30px)",
+    minHeight: "10vh",
+    marginBottom: '30px'
   },
   sidebar: {
     height: "98%",
@@ -141,7 +144,9 @@ const theme = responsiveFontSizes(createMuiTheme({
   bioAvatar: {
     padding: theme.spacing(2),
     float: 'right',
-    top: "-2.5rem"
+    [theme.breakpoints.up('sm')]: {
+      top: "-2.5rem"
+    }
   },
   sectionsContainer: {
     overflowX: 'hidden',
@@ -205,6 +210,17 @@ const theme = responsiveFontSizes(createMuiTheme({
   },
   experienceEntryContent: {},
   skill_card_container: {},
+  skillModal: {
+    position: 'absolute',
+    left: '50vw',
+    top: '50vh',
+    width: 600,
+    maxWidth: '100vw',
+    border: '2px solid #000',
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(4, 8, 6),
+    transform: `translate(-50%, -50%)`,
+  },
   skill_card: {},
   publication_card_container: {},
   publication_card: {},
@@ -214,7 +230,21 @@ const theme = responsiveFontSizes(createMuiTheme({
   publication_card_text: {
     fontWeight: 300
   },
-  pub_button: {}
+  pub_button: {},
+  footer: {
+    position: 'fixed',
+    left: 0,
+    bottom: 0,
+    width: "100%",
+    backgroundColor: indigo[300],
+    color: 'white',
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignContent: 'center',
+    height: '2em',
+    boxShadow: "0px -3px 11px -3px rgba(0,0,0,0.75)",
+    padding: theme.spacing(1)
+  }
 }))
 
 export { styles as default, theme }

@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid"
 import ExtensionIcon from '@material-ui/icons/Extension';
 
 import Section from '../components/section';
-import SkillCard from '../components/skill-card';
+import Skill from '../components/skill';
 
 import useStyles from '../styles'
 
@@ -20,7 +20,7 @@ export default props => {
         {sortedSkillList.map(skill => {
           return (
             <Grid item xs={12} sm={6} md={4}>
-              <SkillCard {...skill} levels={props.data.levels} />
+              <Skill {...skill} levels={props.data.levels} />
             </Grid>
           )
         })}

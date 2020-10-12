@@ -12,36 +12,45 @@ import TimelineIcon from '@material-ui/icons/Timeline';
 import useStyle from "../styles"
 
 export default () => {
-   const classes = useStyle()
+  const classes = useStyle()
 
-   return (
+  let getOnclickScroller = (targetId) => (
+    e => {
+      document.getElementById(targetId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'start'
+      });
+  })
+
+  return (
       <React.Fragment>
-         <ListItem button component="a"
-               href="#bio" className={classes.navItems}>
+        <ListItem button onClick={getOnclickScroller("bio")}
+                  component="a" className={classes.navItems}>
             <ListItemIcon>
-               <BioIcon/>
+              <BioIcon/>
             </ListItemIcon>
             <ListItemText primary="Short bio"/>
          </ListItem>
 
-         <ListItem button component="a"
-               href="#timeline" className={classes.navItems} >
+         <ListItem button onClick={getOnclickScroller("timeline")}
+                   component="a" className={classes.navItems} >
             <ListItemIcon>
-               <TimelineIcon/>
+              <TimelineIcon/>
             </ListItemIcon>
             <ListItemText primary="Timeline"/>
          </ListItem>
 
-         <ListItem button component="a"
-               href="#skills" className={classes.navItems}>
+         <ListItem button onClick={getOnclickScroller("skills")}
+                   component="a" className={classes.navItems}>
             <ListItemIcon>
                <SkillsIcon/>
             </ListItemIcon>
             <ListItemText primary="Skills"/>
          </ListItem>
 
-         <ListItem button component="a"
-               href="#published_work" className={classes.navItems}>
+         <ListItem button onClick={getOnclickScroller("published_work")}
+                   component="a" className={classes.navItems}>
             <ListItemIcon>
                <PublishedWorkIcon/>
             </ListItemIcon>

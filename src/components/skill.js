@@ -2,9 +2,9 @@ import React from 'react';
 
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
-import CardContent from '@material-ui/core/CardContent';
+import Modal from '@material-ui/core/Modal';
+import Paper from '@material-ui/core/Paper';
 
-import Collapse from '@material-ui/core/Collapse';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
@@ -21,10 +21,10 @@ import useStyles from "../styles"
 export default function SkillCard(props) {
   const classes = useStyles()
 
-  const [expanded, setExpanded] = React.useState(false)
+  const [showMore, setShowMore] = React.useState(false)
 
-  const handleExpandClick = () => {
-    setExpanded(!expanded)
+  const toogleShowMore = () => {
+    setShowMore(!showMore)
   };
 
   const progressIcons = {
@@ -41,25 +41,29 @@ export default function SkillCard(props) {
 
   const expandComp = (
     <IconButton
-      onClick={handleExpandClick}
-      aria-expanded={expanded}
+      onClick={toogleShowMore}
+      aria-expanded={showMore}
       aria-label="show more">
-        {expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+        {showMore ? <ExpandLessIcon /> : <ExpandMoreIcon />}
     </IconButton>
   )
 
+  const modal_label_id = `${props.name}-description-title`
+  const modal_description_id = `${props.name}-description-text`
   return (
     <Card className={classes.skill_card} variant="outlined" elevation={0}>
       <CardHeader avatar={progressIcons[props.level]}
-        title={props.name}
-        action={expandComp}/>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography caption>
-            {props.few_words}
-          </Typography>
-        </CardContent>
-      </Collapse>
+                  title={props.name} action={expandComp}/>
+      <Modal
+        open={showMore}
+        onClose={toogleShowMore}
+        aria-labelledby={modal_label_id}
+        aria-describedby={modal_description_id}>
+        <Paper className={classes.skillModal}>
+          <Typography id={modal_label_id} variant='h3'>{props.name}</Typography>
+          <Typography id={modal_description_id} variant='p'>{props.few_words}</Typography>
+        </Paper>
+      </Modal>
     </Card>
   )
 }
