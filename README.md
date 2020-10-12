@@ -3,10 +3,10 @@
 I made this to practice react after finishing a course.
 Feel free to use it for your own website but let me know if you make it look nicer :)
 
-(Live version)[http://clarinet.u-strasbg.fr/~renato/]
+[Live version](http://clarinet.u-strasbg.fr/~renato/)
 
 ### Customization
-All customization is done in the cv-data.js file. There, there script find the information to populate the website with the information.
+All customization is done in the cv-data.js file. There, the script finds the information to populate the website elements.
 
 
 ### Libraries used
