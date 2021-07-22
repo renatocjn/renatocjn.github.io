@@ -17,7 +17,7 @@ export default (props) => {
       <Avatar
         className={[classes.Avatar, classes.sidebarAvatar]}
         variant="rounded"
-        src={`${process.env.PUBLIC_URL}/avatar.jpg`}
+        src="./avatar.jpg"
         alt="My Picture"
       />
       <ContactsList info={props.contact_info} />

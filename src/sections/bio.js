@@ -20,7 +20,7 @@ export default (props) => {
       <Typography variant="body1" className={classes.bioText}>
         <Hidden mdUp implementation="css">
           <Avatar
-            src={`${process.env.PUBLIC_URL}/avatar.jpg`}
+            src="./avatar.jpg"
             variant="rounded"
             className={[classes.Avatar, classes.bioAvatar].join(' ')}
           />
