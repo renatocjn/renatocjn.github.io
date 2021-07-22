@@ -139,7 +139,7 @@ export default {
       type: 'DOI',
       link: 'https://doi.org/10.14209/sbrt.2017.61',
     }],
-    few_words: '',
+    few_words: 'The massive amount of low-end uplink traffic of Machine to Machine (M2M) communications are a key aspect of what 5G will be. In this context, Narrowband-IoT (NB-IoT) is described as the next step to allow Long Term Evolution (LTE) support for this type of traffic. This new technology provides support to massive amounts of ultra-low-end devices while occupying the frequency space of a single LTE resource block. This work studies the NB-IoT uplink, which allows multitone and single-tone transmissions. These types of transmissions result in configurations of resource units for NB-IoT devices that have different durations and frequency occupations. We present extensive simulations results that provide insight into the behavior of the configurations. Based on these simulations, we discuss the best resource configurations to be used by NB-IoT. We also defend the feasibility of NB-IoT for higher tier traffic.',
   }, {
     authors: ['Oliveira Maciel, F. A.', 'Juaçaba Neto, R. C.', 'Bezerra, R. L.', 'Oliveira, C. T.', 'Andrade, R. M. C.'],
     title: 'Uma Proposta de Portal de Aplicação do NS-3 para Aprendizagem de Redes de Computadores',
@@ -150,7 +150,7 @@ export default {
       type: 'pdf',
       link: 'http://www.tise.cl/volumen10/TISE2014/tise2014_submission_305.pdf',
     }],
-    few_words: '',
+    few_words: 'The study of computer network concepts is an important requirement in the field of Information and Communications Technology (ICT). In general, it is necessary to use a network simulator to perform practical activities for students, which allows the understanding of main concepts as well as stimulates the searching of new network solutions. The Network Simulator 3 (NS-3) is a good example of a robust and well-used simulator to education and research. However, the installation, configuration and use of NS-3 need a minimal technical skill by the user. Besides that, it requires considerable computational resources (memory, processing and storage) to execute the simulations. Therefore, to facilitate and stimulate the use of NS-3 in the study of computer networks, this paper presents a Portal of NS-3, where the students can interact with a friendly NS-3 web-based interface to submit their network simulations. This website is hosted in a high performance computing environment, composed by heterogeneous infrastructures such as cluster and cloud. Finally, making use of the portal, the students can easily d efine network functionalities and parameters through the use of an architecture that allows the interaction between the portal and the high performance computing environment. ',
   }, {
     authors: ['Juaçaba Neto, R. C.', 'Andrade, R. M. C.', 'Braga, R. B.', 'Theoleyre, F.', 'Oliveira, C. T.'],
     title: 'Performance issues with routing in multi-channel multi-interface IEEE 802.11s networks',
@@ -164,7 +164,7 @@ export default {
       type: 'DOI',
       link: 'https://doi.org/10.1109/WD.2014.7020810',
     }],
-    few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    few_words: 'Wireless Mesh Networks have the potential to serve as an all-wireless backbone. They represent a key building block of the new Internet of Things to collect all the traffic. However, IEEE 802.11 performs very poorly in multi-hop topologies leading to unfairness and a poor throughput. Thus, the standard IEEE 802.11s proposes to re-use the IEEE 802.11 medium access in a mesh multi-hop topology while using a routing protocol to create routes at the layer 2. IEEE 802.11s may exploit multi-channel multi-interface wireless routers to increase the through-put. In particular, the routing protocol must select carefully the forwarders to limit inter- and intra-flow interference. In this paper, we propose to fully characterize the performance of IEEE 802.11s when using multi-interface nodes, and to isolate some key performance issues. We also propose some key mechanisms that must be implemented to solve these pathological cases and to improve the throughput.',
   }, {
     authors: ['Carvalho Junior F. H.', 'Rezende, C. A.', 'Silva, J. d. C.', 'Magalhães, F. J. L.', 'Juaçaba Neto, R. C.'],
     title: 'On the Performance of Multidimensional Array Representations in Programming Languages Based on Virtual Execution Machines',
@@ -178,7 +178,7 @@ export default {
       type: 'DOI',
       link: 'https://doi.org/10.1007/978-3-642-40922-6_3',
     }],
-    few_words: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    few_words: 'This paper evaluates the performance of virtual execution machines (VM) of the CLI and JVM standards for the common approaches to represent multidimensional arrays in high performance computing applications. In particular, it shows which representation is the best for each virtual machine implementation, showing that the choices may be surprisingly contradictory, even with respect to previous results of other works on performance evaluation of VMs.',
   },
   ],
 };
