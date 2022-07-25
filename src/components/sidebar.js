@@ -10,6 +10,8 @@ import useStyles from '../styles';
 import NavLinks from './nav-links';
 import ContactsList from './contacts';
 
+import avatarPic from '../../static/photo.jpg';
+
 export default (props) => {
   const classes = useStyles();
   return (
@@ -17,7 +19,7 @@ export default (props) => {
       <Avatar
         className={[classes.Avatar, classes.sidebarAvatar]}
         variant="rounded"
-        src="./avatar.jpg"
+        src={avatarPic}
         alt="My Picture"
       />
       <ContactsList info={props.contact_info} />

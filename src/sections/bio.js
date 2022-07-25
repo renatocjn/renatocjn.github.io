@@ -8,6 +8,8 @@ import Section from '../components/section';
 
 import useStyles from '../styles';
 
+import avatarPic from '../../static/photo.jpg';
+
 export default (props) => {
   const classes = useStyles();
   return (
@@ -20,7 +22,7 @@ export default (props) => {
       <Typography variant="body1" className={classes.bioText}>
         <Hidden mdUp implementation="css">
           <Avatar
-            src="./avatar.jpg"
+            src={avatarPic}
             variant="rounded"
             className={[classes.Avatar, classes.bioAvatar].join(' ')}
           />

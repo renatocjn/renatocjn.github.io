@@ -5,7 +5,7 @@ export default {
     email: 'caminha@unistra.fr',
     github: 'https://github.com/renatocjn',
     address: 'Strasbourg, France',
-    phone_number: '(+33) 3 68 85 44 01',
+    phone_number: '(+33) (0)6 13 18 16 93',
   },
   timeline: [{
     type: 'education',
