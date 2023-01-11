@@ -19,3 +19,4 @@ All customization is done in the cv-data.js file. There, the script finds the in
 - Translations
 - Cooler timeline + filters
 - Better looking skills section
+- add reCaptcha to email
