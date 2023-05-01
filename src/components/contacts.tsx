@@ -3,24 +3,24 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ContactInfo } from '../data/models';
 
 export default (props: ContactInfo) => 
-  <ul className='contact-list'>
-    <li>
+  <section id='contact-list'>
+    <div>
       <span className='icon'> <FontAwesomeIcon icon='envelope'/> </span>
       <a href={`mailto:${props.email}`}> {props.email} </a>
-    </li>
+    </div>
 
-    {props.phone_number && <li>
+    {props.phone_number && <div>
       <span className='icon'> <FontAwesomeIcon icon='phone' /> </span>
       <label> {props.phone_number} </label>
-    </li>}
+    </div>}
 
-    <li>
-      <span className='icon'> <FontAwesomeIcon icon='github' /> </span>
+    <div>
+      <span className='icon'> <FontAwesomeIcon icon='fa-brands fa-github' /> </span>
       <a href={props.github}> My GitHub Profile </a>
-    </li>
+    </div>
 
-    <li>
+    <div>
       <span className='icon'> <FontAwesomeIcon icon='location-dot' /> </span>
       <label> {props.address}</label>
-    </li>
-  </ul>
+    </div>
+  </section>

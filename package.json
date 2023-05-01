@@ -8,11 +8,11 @@
   "license": "APACHE",
   "repository": {
     "type": "git",
-    "url": "git@github.com:renatocjn/react-website.git"
+    "url": "git@github.com:renatocjn/renatocjn.github.io.git"
   },
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build",
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "deploy": "gh-pages -d build"
   },
   "browserslist": {
@@ -29,7 +29,10 @@
     ]
   },
   "dependencies": {
+    "@fontsource/roboto": "^4.5.8",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "js-yaml": "^4.1.0",
@@ -37,6 +40,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.21.5",
     "@parcel/transformer-sass": "^2.8.3",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^18.15.13",

@@ -1,14 +1,13 @@
 import React from 'react';
 
-import package_info from '../../package.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default () => {
   return (
     <footer>
       <span>
-        <FontAwesomeIcon icon='github' />
-        <a href={package_info.repository.url}> Source code </a>
+        <FontAwesomeIcon icon='fa-brands fa-github' />
+        <a target="_blank" href="https://github.com/renatocjn/renatocjn.github.io"> Source code </a>
       </span>
       <span>
         &copy; 2020

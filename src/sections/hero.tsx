@@ -6,8 +6,8 @@ interface Props {
 }
 
 export default (props: Props) => (
-  <div className='hero'>
+  <section id='hero'>
     <span className='name'> {props.full_name} </span>
     <span className='two-liner'> {props.two_liner} </span>
-  </div>
+  </section>
 )

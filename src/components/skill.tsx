@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Skill } from '../data/models';
 
 const progressIcons = {
-  'Beginner': <FontAwesomeIcon icon='star-sharp-half' />,
-  'Intermediary': <FontAwesomeIcon icon='star-sharp' />,
-  'Advanced': <FontAwesomeIcon icon="star-sharp"/>,
+  'Beginner': <FontAwesomeIcon icon='star-half' />,
+  'Intermediary': <FontAwesomeIcon icon='fa-regular fa-star' />,
+  'Advanced': <FontAwesomeIcon icon="fa-solid fa-star"/>,
 };
 
 export default function SkillItem(skill: Skill) {

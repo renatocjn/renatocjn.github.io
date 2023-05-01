@@ -3,7 +3,9 @@ import { createRoot } from "react-dom/client";
 
 import App from './app';
 
+import "@fontsource/roboto";
+import './icon-setup';
+
 const container = document.getElementById("root")!
-console.log('Welp', container)
 const root = createRoot(container)
 root.render(<App />)

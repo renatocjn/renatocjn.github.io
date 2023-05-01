@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  @apply font-sans antialiased;
+}
+
+.section {
+  @apply mb-6;
+
+  .title {
+    @apply inline text-4xl ps-3;
+  }
+
+  .subtitle {
+    @apply inline text-xl ps-8 text-slate-700;
+  }
+
+  .contents {
+    @apply mt-6;
+  }
+}
+
+#hero {
+  @apply h-screen;
+}
+
+#bio {
+  .contents {
+    @apply grid mx-auto w-3/4;
+    grid-template-areas:
+      "picture text";
+  }
+
+  .picture {
+    grid-area: picture;
+  }
+
+  .text {
+    grid-area: text;
+    @apply m-auto px-3 text-center ;
+  }
+}
+
+#skills .contents {
+  @apply gap-3 grid grid-cols-4
+}
+
+#timeline .contents {
+  @apply gap-3 grid grid-cols-3
+}
+
+$footer-height: 3rem;
+footer {
+  grid-area: footer;
+  height: $footer-height;
+  @apply px-3 py-1
+}
+
+
+
+
+
+
+
+
+
+
+#navigation-links, #contact-list {
+  @apply flex flex-col mt-32;
+}
+
+#main-content {
+  > * {
+    @apply even:bg-sky-200 odd:bg-sky-400;
+  }
+
+  grid-area: main-content;
+  height: calc(100vh - $footer-height);
+  @apply overflow-y-scroll;
+  
+  // Hidden scrollbar
+  ::-webkit-scrollbar {  /* Hide scrollbar for Chrome, Safari and Opera */
+    display: none;
+  }
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+#main-container {
+  @apply grid gap-3 container h-screen overflow-y-hidden;
+  grid-template-areas: 
+    "navlinks main-content contacts"
+    "footer footer footer";
+}
